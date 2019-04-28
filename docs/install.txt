@@ -1,0 +1,40 @@
+Instrucoes para utilizacao da linha de comando.
+
+# Create a new .env file from example file, and after create a new key
+$ cp .env.example .env
+$ php artisan key:generate
+
+
+# Drop all tables and re-run all migrations
+$ php artisan migrate:fresh
+
+# Drop all tables, re-run all migrations and run seeders
+$ php artisan migrate:fresh --seed
+
+# Run the database migrations
+$ php artisan migrate
+
+# Rollback the last database migration - Only show SQL queries
+$ php artisan migrate:rollback --step=1 --pretend
+
+# Serve the application on the PHP development server for all hosts
+$ php artisan serve --host=0.0.0.0 --port=8080
+$ php artisan serve --host=192.168.56.101 --port=8080
+
+# Run Mysql file
+$ mysql -u USER -p DATABASE_NAME < FILE
+
+# GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123';
+
+# INSTALL
+composer dump-autoload
+php artisan migrate:fresh --seed
+php artisan key:generate
+
+# INSTALL - HOSTGATOR
+sh hostgator-composer-install.sh
+cp .env.example .env
+/opt/php71/bin/php composer.phar install --no-dev
+/opt/php71/bin/php composer.phar dump-autoload
+/opt/php71/bin/php artisan migrate:fresh --seed
+/opt/php71/bin/php artisan key:generate
