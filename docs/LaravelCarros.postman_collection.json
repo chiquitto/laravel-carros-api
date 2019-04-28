@@ -6,6 +6,106 @@
 	},
 	"item": [
 		{
+			"name": "Carro - Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/carro",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"carro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carro - Get One",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/carro/2",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"carro",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carro - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idMarca\": 1,\n    \"modelo\": \"Palio\",\n    \"ano\": 2003\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/carro",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"carro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carro - Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_method\": \"PUT\",\n\t\n    \"idMarca\": 1,\n    \"modelo\": \"Palio Completo\",\n    \"ano\": 2003\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/carro/6",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"carro",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Marca - Get All",
 			"request": {
 				"method": "GET",
@@ -159,7 +259,7 @@
 	],
 	"variable": [
 		{
-			"id": "0be065c4-37f8-49c9-a59c-4f3752c65767",
+			"id": "af603758-5e02-43c1-8f55-b05884ccec75",
 			"key": "URL",
 			"value": "http://192.168.56.101:8080/api",
 			"type": "string"
