@@ -20,7 +20,7 @@ class CarroResource extends JsonResource
             'idMarca' => $this->idMarca,
             'modelo' => $this->modelo,
             'ano' => $this->ano,
-            'img' => $this->hasImg ? url("/img/carro{$this->idCarro}.png") : null,
+            'img' => $this->img
         ];
     }
 }

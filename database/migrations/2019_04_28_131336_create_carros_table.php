@@ -18,7 +18,7 @@ class CreateCarrosTable extends Migration
             $table->unsignedBigInteger('idMarca');
             $table->text('modelo');
             $table->integer('ano');
-            $table->boolean('hasImg')->default(false);
+            $table->string('img')->nullable();
             $table->timestamps();
         });
     }
