@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "23acf3e8-ce7e-4927-8d37-11feac680436",
+		"name": "LaravelCarros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Marca - Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/marca",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"marca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marca - Get One",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/marca/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"marca",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marca - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"marca\": \"Peugeot\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/marca",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"marca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marca - Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_method\": \"PUT\",\n    \"marca\": \"Peugeot\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/marca/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"marca",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Marca - Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_method\": \"DELETE\",\n    \"idMarca\": 10\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/marca/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"marca",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "55b43419-8b49-4cc5-b28f-bf6a7388c872",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "de12bcc4-5f6c-47b3-98f8-20390f1d1afe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "0be065c4-37f8-49c9-a59c-4f3752c65767",
+			"key": "URL",
+			"value": "http://192.168.56.101:8080/api",
+			"type": "string"
+		}
+	]
+}
