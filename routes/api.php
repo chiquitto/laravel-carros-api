@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('marca', 'Api\MarcaController');
+Route::apiResource('carro', 'Api\CarroController');
