@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/migrate-fresh-seed', function () {
+
+    \Illuminate\Support\Facades\Artisan::call('migrate:fresh --seed');
+
+    return 'OK';
+});
